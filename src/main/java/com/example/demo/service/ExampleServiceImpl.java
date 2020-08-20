@@ -42,7 +42,7 @@ public class ExampleServiceImpl implements IExampleService{
 			json2 = new Gson().toJson("");
 			json = new Gson().toJson("mensaje Error");
 		}
-		return "{" + json +","+ json2 +"}";
+		return "[" + json +","+ json2 +"]";
 	}
 	
 	public String detail(long id) {
@@ -54,7 +54,7 @@ public class ExampleServiceImpl implements IExampleService{
 			json2 = new Gson().toJson("");
 			json = new Gson().toJson("mensaje Error");
 		}
-		return "{" + json +","+ json2 +"}";
+		return "[" + json +","+ json2 +"]";
 	}
 
 	@Override
@@ -71,7 +71,7 @@ public class ExampleServiceImpl implements IExampleService{
 			json2 = new Gson().toJson("");
 			json = new Gson().toJson("mensaje Error");
 		}
-		return "{" + json +","+ json2 +"}";
+		return "[" + json +","+ json2 +"]";
 	}
 
 	@Override
@@ -83,7 +83,7 @@ public class ExampleServiceImpl implements IExampleService{
 		} catch (Exception e) {
 			json = new Gson().toJson("mensaje Error");
 		}
-		return "{" + json + "}";
+		return "[" + json + "]";
 	}
 
 	@Override
@@ -95,7 +95,7 @@ public class ExampleServiceImpl implements IExampleService{
 		} catch (Exception e) {
 			json = new Gson().toJson("mensaje Error");
 		}
-		return "{" + json + "}";
+		return "[" + json + "]";
 	}
 
 	@Override
@@ -109,7 +109,7 @@ public class ExampleServiceImpl implements IExampleService{
 		} catch (Exception e) {
 			json = new Gson().toJson("mensaje Error");
 		}
-		return "{" + json +"}";
+		return "[" + json +"]";
 	}
 
 }
