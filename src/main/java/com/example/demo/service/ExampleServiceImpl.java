@@ -62,7 +62,7 @@ public class ExampleServiceImpl implements IExampleService{
 		String json = null, json2 = null;
 		try {
 			List<Example> result = new ArrayList<>();
-			for (Example example : list) {
+			for (Example model : list) {
 				result.add(repository.findById(example.getId()).orElse(null));
 			}
 			json2 = new Gson().toJson(result);
@@ -75,10 +75,13 @@ public class ExampleServiceImpl implements IExampleService{
 	}
 
 	@Override
-	public String edit(Example model) {
+	public String edit(List<Example> list) {
 		String json = null;
 		try {
-			repository.save(model);
+			List<ProductCategory> result = new ArrayList<>();
+			for (ProductCategory model : list) {
+				repository.save(model);
+			}
 			json = new Gson().toJson("mensaje OK");
 		} catch (Exception e) {
 			json = new Gson().toJson("mensaje Error");
